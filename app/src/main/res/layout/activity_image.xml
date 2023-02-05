@@ -4,27 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Controller.MainActivity">
+    tools:context=".Controller.ImageActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="110dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="20dp"
+        android:id="@+id/imagesID"
+        android:layout_width="96dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:text="Category"
+        android:text="Images"
         android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="#611273"
-        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textSize="25sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RecyclerId1"
-        android:layout_width="332dp"
-        android:layout_height="612dp"
+        android:id="@+id/imageRecycler"
+        android:layout_width="331dp"
+        android:layout_height="583dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
@@ -32,5 +33,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/imagesID" />
 </androidx.constraintlayout.widget.ConstraintLayout>
