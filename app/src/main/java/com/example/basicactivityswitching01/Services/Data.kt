@@ -6,9 +6,9 @@ import com.example.basicactivityswitching01.Model.Images
 
 object Data {
     val categories = listOf(
-        Categories("Anime","animeImage"),
-        Categories("Nature","natureImage"),
-        Categories("Animal","animalImage")
+        Categories("Anime","animeimage"),
+        Categories("Nature","naturalimage"),
+        Categories("Animal","animalimage")
     )
 
     val anime = listOf(
