@@ -27,7 +27,7 @@ object Data {
     val animal = listOf(
         Images("cat","Cat"),
         Images("dog","Dog"),
-        Images("Other","Other")
+        Images("other","Other")
     )
 
     fun getImages(category:String?): List<Images>
