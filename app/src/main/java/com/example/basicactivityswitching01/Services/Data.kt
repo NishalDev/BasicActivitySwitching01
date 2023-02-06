@@ -13,9 +13,9 @@ object Data {
 
     val anime = listOf(
         Images("naruto","Naruto"),
-        Images("AOT","AOT"),
-        Images("JJK","JJK"),
-        Images("DemonSlayer","Demon Slayer")
+        Images("aot","AOT"),
+        Images("jjk","JJK"),
+        Images("demonslayer","Demon Slayer")
     )
 
     val nature = listOf(
@@ -33,8 +33,8 @@ object Data {
     fun getImages(category:String?): List<Images>
     {
      return when(category){
-         "ANIME" -> anime
-         "NATURE" -> nature
+         "Anime" -> anime
+         "Nature" -> nature
          else -> animal
      }
     }

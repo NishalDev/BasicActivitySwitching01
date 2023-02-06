@@ -17,6 +17,8 @@ class ImagesAdapter(val context: Context, val images: List<Images>): RecyclerVie
 
         fun bindImage(images: Images, context: Context){
             val resourceId =context.resources.getIdentifier(images.images,"drawable",context.packageName)
+            imageImage?.setImageResource(resourceId)
+            imageName?.text = images.title
         }
     }
 
