@@ -8,6 +8,7 @@ import com.example.basicactivityswitching01.Adapter.ImagesAdapter
 import com.example.basicactivityswitching01.R
 import com.example.basicactivityswitching01.Services.Data
 import com.example.basicactivityswitching01.Utilities.EXTRA_CATEGORY
+import com.example.basicactivityswitching01.Utilities.EXTRA_IMAGE
 import kotlinx.android.synthetic.main.activity_image.*
 import kotlinx.android.synthetic.main.imagelist.view.*
 
@@ -18,7 +19,11 @@ class ImageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_image)
         val categoryType = intent.getStringExtra(EXTRA_CATEGORY)
-        adapter = ImagesAdapter(this,Data.getImages(categoryType))
+        adapter = ImagesAdapter(this,Data.getImages(categoryType)){ images->
+            val imageIntent = Intent(this,ImageDetails::class.java)
+            imageIntent.putExtra(EXTRA_IMAGE,images)
+            startActivity(imageIntent)
+        }
 
        val layoutManager = LinearLayoutManager(this)
        imageRecycler.layoutManager = layoutManager

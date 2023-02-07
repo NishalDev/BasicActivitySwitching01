@@ -24,19 +24,18 @@
 
     <TextView
         android:id="@+id/imageName"
-        android:layout_width="224dp"
-        android:layout_height="64dp"
+        android:layout_width="245dp"
+        android:layout_height="94dp"
         android:text="NARUTO"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageImage"
         app:layout_constraintEnd_toEndOf="@+id/imageImage"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="@+id/imageImage"
         app:layout_constraintTop_toTopOf="@+id/imageImage"
-        app:layout_constraintVertical_bias="0.468"
-        />
+        app:layout_constraintVertical_bias="0.614" />
 </androidx.constraintlayout.widget.ConstraintLayout>
