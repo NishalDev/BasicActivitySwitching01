@@ -1,7 +1,9 @@
 package com.example.basicactivityswitching01.Services
 
 
+import com.example.basicactivityswitching01.Controller.ImageDetails
 import com.example.basicactivityswitching01.Model.Categories
+import com.example.basicactivityswitching01.Model.ImageImage
 import com.example.basicactivityswitching01.Model.Images
 
 object Data {
@@ -30,6 +32,32 @@ object Data {
         Images("other","Other")
     )
 
+    val naruto = listOf(
+        ImageImage("naruto01"),
+        ImageImage("naruto02"),
+        ImageImage("naruto03"),
+        ImageImage("naruto04")
+    )
+
+    val aot = listOf(
+        ImageImage("naruto01"),
+        ImageImage("naruto02"),
+        ImageImage("naruto03"),
+        ImageImage("naruto04")
+    )
+    val jjk = listOf(
+        ImageImage("naruto01"),
+        ImageImage("naruto02"),
+        ImageImage("naruto03"),
+        ImageImage("naruto04")
+    )
+    val demonslayer = listOf(
+        ImageImage("naruto01"),
+        ImageImage("naruto02"),
+        ImageImage("naruto03"),
+        ImageImage("naruto04")
+    )
+
     fun getImages(category:String?): List<Images>
     {
      return when(category){
@@ -37,6 +65,15 @@ object Data {
          "Nature" -> nature
          else -> animal
      }
+    }
+    fun getImageDetail(image: String?): List<ImageImage>
+    {
+        return when(image){
+            "Naruto" -> naruto
+            "AOT" -> aot
+            "JJK" -> jjk
+            else -> demonslayer
+        }
     }
 }
 

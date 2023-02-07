@@ -21,7 +21,7 @@ class ImageActivity : AppCompatActivity() {
         val categoryType = intent.getStringExtra(EXTRA_CATEGORY)
         adapter = ImagesAdapter(this,Data.getImages(categoryType)){ images->
             val imageIntent = Intent(this,ImageDetails::class.java)
-            imageIntent.putExtra(EXTRA_IMAGE,images)
+            imageIntent.putExtra(EXTRA_IMAGE,images.images)
             startActivity(imageIntent)
         }
 
