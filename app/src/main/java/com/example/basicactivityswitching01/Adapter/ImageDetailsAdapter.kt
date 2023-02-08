@@ -10,19 +10,21 @@ import com.example.basicactivityswitching01.Model.ImageImage
 import com.example.basicactivityswitching01.Model.Images
 import com.example.basicactivityswitching01.R
 
-class ImageDetailsAdapter(val context: Context, val imageDetails: List<ImageImage>):RecyclerView.Adapter<ImageDetailsAdapter.Holder>(){
-    inner class Holder(itemView: View) :RecyclerView.ViewHolder(itemView){
+class ImageDetailsAdapter(val context: Context, val imageDetails: List<ImageImage>) :
+    RecyclerView.Adapter<ImageDetailsAdapter.Holder>() {
+    inner class Holder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val ImageImageID = itemView?.findViewById<ImageView>(R.id.ImageImageID)
 
-        fun bindImageImage(imageImage: ImageImage, context: Context){
-            val resourceId = context.resources.getIdentifier(imageImage.images,"drawable",context.packageName)
+        fun bindImageImage(imageImage: ImageImage, context: Context) {
+            val resourceId =
+                context.resources.getIdentifier(imageImage.images, "drawable", context.packageName)
             ImageImageID?.setImageResource(resourceId)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
-        val view = LayoutInflater.from(context).inflate(R.layout.image_detail_llist,parent,false)
-       return Holder(view)
+        val view = LayoutInflater.from(context).inflate(R.layout.image_detail_llist, parent, false)
+        return Holder(view)
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {

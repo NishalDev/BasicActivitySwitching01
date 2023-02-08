@@ -19,9 +19,9 @@ class ImageDetails : AppCompatActivity() {
 
         val imageType = intent.getStringExtra(EXTRA_IMAGE)
 
-        adapter = ImageDetailsAdapter(this,Data.getImageDetail(imageType))
+        adapter = ImageDetailsAdapter(this, Data.getImageDetail(imageType))
 
-        val layoutManager = GridLayoutManager(this,1)
+        val layoutManager = GridLayoutManager(this, 1)
         imageDetailsRecycler.layoutManager = layoutManager
         imageDetailsRecycler.adapter = adapter
     }
